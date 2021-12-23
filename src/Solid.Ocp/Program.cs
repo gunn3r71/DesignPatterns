@@ -1,4 +1,5 @@
 ﻿using System;
+using Solid.Ocp.Vehicles;
 
 namespace Solid.Ocp
 {
@@ -6,17 +7,15 @@ namespace Solid.Ocp
     {
         static void Main(string[] args)
         {
-            var type = TypeVehicle.Car;
+            var type = TypeVehicle.Motorcycle;
 
             if (type is TypeVehicle.Car)
             {
-                var vehicle = new Vehicle("blue", 2002, 1.8, 4, 2);
-                vehicle.Car();
+                var vehicle = new Car("blue", 2002, 1.8, 4, 2);
             }
             else
             {
-                var vehicle = new Vehicle("blue", 2002, 100, 2, 0);
-                vehicle.Motorcycle();
+                var vehicle = new Motorcycle("blue", 2002, 100);
             }
         }
     }
